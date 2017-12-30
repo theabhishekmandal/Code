@@ -1,0 +1,10 @@
+first line contains t test cases
+the next line contains n which is the number of cocktails in the party
+then next line contains c which denotes the number of customers
+then the next c lines contains: 
+								a variable 'k' which denotes the number of cocktails he likes
+								then 'k' integers denoting numbers which is the cocktail number 
+
+
+output:
+	print the minimum number of coctails that the bartender needs to make
