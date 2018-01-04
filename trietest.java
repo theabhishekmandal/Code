@@ -10,9 +10,9 @@ class trie
 	trie[] next;
 	trie()
 	{
-		this.arr=new char[26];
-		this.check=false;
-		this.next=new trie[26];
+		this.arr = new char[26];
+		this.check = false;
+		this.next = new trie[26];
 
 	}
 }
@@ -21,32 +21,32 @@ public class trietest
 	trie head;
 	trietest()
 	{
-		head=new trie();
+		head = new trie();
 	}
 
 	void add(String s)
 	{
         
-      trie temp=head;
-      for(int i=0;i<s.length();i++)
+      trie temp = head;
+      for(int i = 0;i < s.length(); i++)
       {
-      	 int index=s.charAt(i)-'a';
-      	 if(temp.arr[index]!=s.charAt(i))
-      	 	  temp.arr[index]=s.charAt(i);
+      	 int index = s.charAt(i) - 'a';
+      	 if(temp.arr[index] != s.charAt(i))
+      	 	  temp.arr[index] = s.charAt(i);
 
       	 //if position for the next character is not prersent
-      	 if(temp.next[index]==null&&i!=s.length()-1)
-      	 		temp.next[index]=new trie();
+      	 if(temp.next[index] == null && i != s.length() - 1)
+      	 		temp.next[index] = new trie();
       	
-      	 	temp=temp.next[index];
+      	 	temp = temp.next[index];
       }
-      temp.check=true;
+      temp.check = true;
 
 	}
 	void display()
 	{
-		trie temp=head;
-		for(int i=0;i<temp.arr.length;i++)
+		trie temp = head;
+		for(int i = 0;i < temp.arr.length; i++)
 		{
 			
 		}

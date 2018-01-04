@@ -6,29 +6,10 @@ public class Main
 {
     private static PrintWriter out = new PrintWriter(System.out,true);
     private static PrintWriter err = new PrintWriter(System.err,true);
-    private static long start;
-    private static long stop;
-    private static int maxvalue = Integer.MAX_VALUE;
-    private static int minvalue = Integer.MIN_VALUE;
-
-    @SuppressWarnings({"unchecked", "varargs"})
     private static <T> void debug(T... a)
     {
     	err.println(Arrays.deepToString(a));
     }
-    private static void starttime()
-    {
-    	start = System.currentTimeMillis();
-    }
-    private static void stoptime()
-    {
-    	stop = System.currentTimeMillis();
-    }
-    private static void gettime()
-    {
-    	out.println(stop - start);
-    }
-
     static class FastReader
     {
     StringTokenizer st;
@@ -87,7 +68,6 @@ public class Main
 
     }
     }
-    
     public static void main(String args[]) throws IOException
     {
 		FastReader s = new FastReader();
@@ -97,6 +77,44 @@ public class Main
     }
     private static void solve(FastReader s)
     {
-    	
+    	 int n = s.nextInt();
+    	 int arr[] = new int[n];
+    	 for(int i = 0; i < arr.length; i++)
+    	 	arr[i] = s.nextInt();
+    	 heapsort(arr);
+    	 out.println(Arrays.toString(arr));
+    }
+    private static void heapsort(int[] arr)
+    {
+    	BuildMaxheap(arr, arr.length - 1);
+    	for(int i = arr.length - 1 ; i >= 1 ; i--)
+    		{
+    			int temp = arr[0];
+    			arr[0] = arr[i];
+    			arr[i] = temp;
+    			max_heap(arr, 0, i);
+    		}
+    }
+    private static void BuildMaxheap(int[]  arr, int length)
+    {
+    	for(int i = (int)Math.floor(length / 2); i >= 0 ; i--)
+    		max_heap(arr, i, length);
+    }
+    private static void max_heap(int arr[], int i, int length)
+    {
+    	int l = 2 * i + 1;
+    	int r  = 2 * i + 2;
+    	int largest = i;
+    	if(l < length && arr[l] > arr[i])
+    		largest = l;
+    	if(r < length && arr[r] > arr[largest])
+    		largest = r;
+    	if(i != largest)
+    		{
+    			int temp = arr[i];
+    			arr[i] = arr[largest];
+    			arr[largest] = temp;
+    			max_heap(arr, largest, length);
+    		}
     }
 }

@@ -6,29 +6,6 @@ public class Main
 {
     private static PrintWriter out = new PrintWriter(System.out,true);
     private static PrintWriter err = new PrintWriter(System.err,true);
-    private static long start;
-    private static long stop;
-    private static int maxvalue = Integer.MAX_VALUE;
-    private static int minvalue = Integer.MIN_VALUE;
-
-    @SuppressWarnings({"unchecked", "varargs"})
-    private static <T> void debug(T... a)
-    {
-    	err.println(Arrays.deepToString(a));
-    }
-    private static void starttime()
-    {
-    	start = System.currentTimeMillis();
-    }
-    private static void stoptime()
-    {
-    	stop = System.currentTimeMillis();
-    }
-    private static void gettime()
-    {
-    	out.println(stop - start);
-    }
-
     static class FastReader
     {
     StringTokenizer st;
@@ -87,16 +64,29 @@ public class Main
 
     }
     }
-    
     public static void main(String args[]) throws IOException
     {
 		FastReader s = new FastReader();
-		// int t = s.nextInt();
-		//while(t-- > 0)
-		solve(s);
+		int t = s.nextInt();
+		while(t-- > 0)
+		 solve(s);
+	
     }
     private static void solve(FastReader s)
     {
-    	
+    	int n = s.nextInt();
+    	int arr[] = new int[n + 1];
+    	int min = Integer.MAX_VALUE;
+    	int index = -1;
+    	for(int i = 1 ;i < arr.length ;i++)
+    		{
+    			arr[i] = s.nextInt();
+    			if(arr[i] < min)
+    				{
+    					min = arr[i];
+    					index = i;
+    				}
+		    }
+		    out.println(index);		
     }
 }

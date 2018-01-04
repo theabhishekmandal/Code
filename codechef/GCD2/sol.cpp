@@ -1,5 +1,6 @@
 #include<iostream>
 #define ll long long int
+#define fori(i,n,j) for(int i = 0 ; i < n ; i+=j)
 using namespace std;
 int main()
 {
