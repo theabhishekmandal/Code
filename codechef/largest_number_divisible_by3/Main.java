@@ -73,34 +73,34 @@ public class Main
 	}
 	public static void main(String args[]){
 
-		FastReader s=new FastReader();
-		int t=s.nextInt();
-		while(t-->0)
+		FastReader s = new FastReader();
+		int t = s.nextInt();
+		while(t-- > 0)
 			solve(s);
 
 	}
 	private static void solve(FastReader s)
 	{
-		String number=s.next();
-		int sum=0;
-		for(int i = 0;i<number.length();i++)
-			sum+=number.charAt(i)-'0';
+		String number = s.next();
+		int sum = 0;
+		for(int i = 0; i < number.length(); i++)
+			sum += number.charAt(i) - '0';
 
-		int max=Integer.MIN_VALUE;
-		int save=-1;
-		for(int i = 0;i<number.length();i++)
+		int max = Integer.MIN_VALUE;
+		int save = -1;
+		for(int i = 0; i < number.length(); i++)
 		{
-			int loc=sum-(number.charAt(i)-'0');
-			if(loc >max && loc%3 == 0)
+			int loc = sum - (number.charAt(i) - '0');
+			if(loc > max && loc % 3 == 0)
 			{
-				max=loc;
-				save=i;
+				max = loc;
+				save = i;
 			}
 		}
-		if(save == -1 || number.length()==1)
-			out.println(number+" "+-1);
+		if(save == -1 || number.length() == 1)
+			out.println(number + " " + -1);
 		else
-			out.println(number+" "+number.substring(0,save)+number.substring(save+1));
+			out.println(number + " " + number.substring(0,save) + number.substring(save + 1));
 
 	}
 }

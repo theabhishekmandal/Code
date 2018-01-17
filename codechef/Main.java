@@ -8,27 +8,15 @@ public class Main
     private static PrintWriter err = new PrintWriter(System.err,true);
     private static long start;
     private static long stop;
-    private static int maxvalue = Integer.MAX_VALUE;
-    private static int minvalue = Integer.MIN_VALUE;
-
-    @SuppressWarnings({"unchecked", "varargs"})
-    private static <T> void debug(T... a)
+    private static int maxint = Integer.MAX_VALUE;
+    private static int minint = Integer.MIN_VALUE;
+    private static void debug(Object... a)
     {
     	err.println(Arrays.deepToString(a));
     }
-    private static void starttime()
-    {
-    	start = System.currentTimeMillis();
-    }
-    private static void stoptime()
-    {
-    	stop = System.currentTimeMillis();
-    }
-    private static void gettime()
-    {
-    	out.println(stop - start);
-    }
-
+    private static void starttime(){start = System.currentTimeMillis();}
+    private static void stoptime(){stop = System.currentTimeMillis();}
+    private static void gettime(){err.println(((double)(stop - start) / 1000.0) + " seconds");}
     static class FastReader
     {
     StringTokenizer st;
@@ -37,7 +25,7 @@ public class Main
     {
         br=new BufferedReader(new InputStreamReader(System.in));
     }
-    String next()
+    String n()
 	{
         while(st==null||!st.hasMoreElements())
 	{
@@ -53,50 +41,52 @@ public class Main
 	    return st.nextToken();
     }
 
-    int nextInt()
+    int ni()
     {
-        return Integer.parseInt(next());
+        return Integer.parseInt(n());
     }
-    float nextFloat()
+    float nf()
     {
-        return Float.parseFloat(next());
-    }
-
-    double nextDouble()
-    {
-        return Double.parseDouble(next());
+        return Float.parseFloat(n());
     }
 
-    long nextLong()
+    double nd()
     {
-        return Long.parseLong(next());
+        return Double.parseDouble(n());
     }
-    String nextLine()
+
+    long nl()
+    {
+        return Long.parseLong(n());
+    }
+    String ns()
     {
         String k="";
 	    try
         {
-	k=br.readLine();
+	       k=br.readLine();
         }
         catch(Exception e)
         {
 
-	e.printStackTrace();
+	       e.printStackTrace();
         }
         return k;
 
     }
-    }
-    
+  }
     public static void main(String args[]) throws IOException
     {
-		FastReader s = new FastReader();
-		// int t = s.nextInt();
-		//while(t-- > 0)
-		solve(s);
+		FastReader in = new FastReader();
+	//	int t = in.ni();
+	//	for(int test = 1; test <= t; test++)
+	//	{
+            solve(in); //, test);
+    //  }
     }
-    private static void solve(FastReader s)
+    private static void solve(FastReader in)
     {
-    	
+
     }
-}
+    
+ }

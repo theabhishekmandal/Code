@@ -15,7 +15,7 @@ class digitsInaNumber
 			BigInteger next=new BigInteger("1");
 			int save=0;
 
-			int i=1;
+			int i=0; // shows number of digits
 			while((next.compareTo(br)!=1))
 			{
 				prev=next;
@@ -25,9 +25,24 @@ class digitsInaNumber
 
 			}
 
-			out.println(i-1);
+			out.println(i);
 
 		}
 		out.flush();
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

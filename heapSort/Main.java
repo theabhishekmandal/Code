@@ -6,7 +6,7 @@ public class Main
 {
     private static PrintWriter out = new PrintWriter(System.out,true);
     private static PrintWriter err = new PrintWriter(System.err,true);
-    private static <T> void debug(T... a)
+    private static void debug(Object... a)
     {
     	err.println(Arrays.deepToString(a));
     }

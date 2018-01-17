@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 #define ll long long int
 #define fori(i,n,j) for(int i = 0 ; i < n ; i+=j)
 using namespace std;
@@ -9,9 +9,9 @@ int main()
 	while(t--)
 	{
 		ll a;
-		char b[250];
+		string b;	
 		cin>>a;
-		gets(b);
+		scanf("%s",b);
 		if(a==0)
 			cout<<b<<endl;
 		else
