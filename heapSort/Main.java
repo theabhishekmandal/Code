@@ -77,16 +77,18 @@ public class Main
     }
     private static void solve(FastReader s)
     {
+		long startime = System.currentTimeMillis();
     	 int n = s.nextInt();
     	 int arr[] = new int[n];
     	 for(int i = 0; i < arr.length; i++)
     	 	arr[i] = s.nextInt();
     	 heapsort(arr);
     	 out.println(Arrays.toString(arr));
+    	 out.println((System.currentTimeMillis() - startime) / 1000);
     }
     private static void heapsort(int[] arr)
     {
-    	BuildMaxheap(arr, arr.length - 1);
+    	BuildMaxheap(arr, arr.length);
     	for(int i = arr.length - 1 ; i >= 1 ; i--)
     		{
     			int temp = arr[0];
@@ -97,7 +99,7 @@ public class Main
     }
     private static void BuildMaxheap(int[]  arr, int length)
     {
-    	for(int i = (int)Math.floor(length / 2); i >= 0 ; i--)
+    	for(int i = length / 2; i >= 0 ; i--)
     		max_heap(arr, i, length);
     }
     private static void max_heap(int arr[], int i, int length)

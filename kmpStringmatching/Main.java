@@ -29,7 +29,7 @@ public class Main
                 else
                     i++;
             }
-            else if(j == hel.length())
+            if(j == hel.length())
             {
                 System.out.println("match found at index " + (i - j));
                 j = lps[j - 1];

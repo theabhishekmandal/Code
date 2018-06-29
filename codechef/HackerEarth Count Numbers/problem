@@ -1,0 +1,23 @@
+Given K prime numbers and T queries of form Ai, Bi, for each query print the number of integers between Ai and Bi (both inclusive) that are divisible by atleast one of the K given primes.
+
+Input
+First line: K and T.
+Second line: K primes.
+Next T lines, each contain Ai, Bi.
+
+Output
+Print T lines, denoting the answer to each of the T queries.
+
+Constraints
+1 <= K <= 10
+1 <= T <= 100
+1 <= A , B <= 109
+Each prime ? 107
+
+Sample input:
+2 1
+2 3
+1 10
+
+Sample output:
+7

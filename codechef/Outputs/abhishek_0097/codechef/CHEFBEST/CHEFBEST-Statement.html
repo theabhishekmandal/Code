@@ -1,0 +1,114 @@
+<div id="node-9682352" class="node clear-block"> 
+ <div class="meta"> 
+ </div> 
+ <div class="content"> 
+  <h3>All submissions for this problem are available.</h3>
+  <h3> Read problems statements in <a target="_blank" href="http://www.codechef.com/download/translated/FEB17/mandarin/CHEFBEST.pdf">Mandarin Chinese</a>, <a target="_blank" href="http://www.codechef.com/download/translated/FEB17/russian/CHEFBEST.pdf">Russian</a> and <a target="_blank" href="http://www.codechef.com/download/translated/FEB17/vietnamese/CHEFBEST.pdf">Vietnamese</a> as well.</h3> 
+  <p>Chef and Chhotu are best friends. Chef knows that Chhotu is very intelligent. So, Chef gives Chhotu a simple problem and wants him to solve this problem by today. The problem is as follows.</p> 
+  <p>There are <b>N</b> students in a classroom. The students are sitting in a single row. Chef wants that all the girls should sit in left side of the row and all the boys should sit in right side of the row. You are provided the initial row of the students by <b>N</b> binary integers, where if <b>i</b>-th integer is zero, then it means that at the <b>i</b>-th position, there is a boy, where <b>1</b> will mean girl. For example, if the initial arrangement be <b>[0 1 0 1 1]</b>, then final arrangement should be <b>[1 1 1 0 0]</b>.</p> 
+  <p>In a single second, if a boy finds that a girl is sitting to his immediate right i.e. if a boy is sitting at i<sup>th</sup> position and a girl is sitting at (i+1)<sup>th</sup> position then they swap their positions. For example, let the initial arrangement be <b>[0 1 0 1 1]</b>. Boys are sitting at positions <b>1, 3</b> (1-based indexing) and girls are sitting at positions <b>2, 4, 5</b>. In a single second, boy at position 1 swaps his seat with girl at position <b>2</b>, and similarly boy at position <b>3</b> swaps his seat with girl at position 4. So, after one second, the arrangement becomes <b>[1 0 1 0 1]</b>.</p> For detailed explanation, please see the explanation of the sample provided at the end of this statement.Now Chef wants to determine the total time after which all the girls move to the left side of the row and all the boys towards the right side of the row. 
+  <p>Chhotu can solve this problem very easily but today he is very busy. Please help Chhotu to solve this problem.</p> 
+  <h3>Input</h3> 
+  <p>The first line of the input contains <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p> 
+  <p>The first line of each test case contains an integer <b>N</b> denoting the number of students in the row.</p> 
+  <p>The second line contains <b>N</b> space-separated integers - <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, ..., <b>A<sub>N </sub></b>denoting the initial arrangement of the students.</p> 
+  <h3>Output</h3> 
+  <p>For each test case, output a single integer on a new line corresponding to the number of seconds required such that all girls are to the left of boys.</p> 
+  <h3>Constraints</h3> 
+  <ul> 
+   <li><b>1 ≤ T ≤ 10</b> </li> 
+   <li><b>1 ≤ N ≤ 10<sup>5</sup></b></li> 
+   <li><b>0 ≤ A<sub>i </sub> ≤ 1</b></li> 
+  </ul> 
+  <h3>Subtasks</h3> 
+  <p><b>Subtask #1 (30 points):</b></p> 
+  <ul> 
+   <li><b>1 ≤ T ≤ 10</b></li> 
+   <li><b>1 ≤ N ≤ 10<sup>3</sup></b></li> 
+  </ul> 
+  <p><b>Subtask #2 (70 points):</b></p> 
+  <ul> 
+   <li><b>1 ≤ T ≤ 10</b></li> 
+   <li><b>1 ≤ N ≤ 10<sup>5</sup></b></li> 
+  </ul> 
+  <h3>Example</h3> 
+  <p><b>Input:</b></p> 
+  <pre>
+2
+10
+0 1 1 1 0 1 1 0 1 1
+5
+0 1 0 1 1
+</pre> 
+  <p><b>Output:</b></p> 
+  <pre>
+7
+3
+</pre> 
+  <h3>Explanation</h3> 
+  <p><b>Test case 1:</b></p> 
+  <p>Initially, student's arrangement is <b>[0 1 1 1 0 1 1 0 1 1]</b></p> 
+  <p>After1<sup>st</sup> second <b>[1 0 1 1 1 0 1 1 0 1]</b></p> 
+  <p>After 2<sup>nd</sup> second <b>[1 1 0 1 1 1 0 1 1 0]</b></p> 
+  <p>After 3<sup>rd</sup> second <b>[1 1 1 0 1 1 1 0 1 0]</b></p> 
+  <p>After 4<sup>th</sup> second <b>[1 1 1 1 0 1 1 1 0 0]</b></p> 
+  <p>After 5<sup>th</sup> second <b>[1 1 1 1 1 0 1 1 0 0]</b></p> 
+  <p>After 6<sup>th</sup> second <b>[1 1 1 1 1 1 0 1 0 0]</b></p> 
+  <p>After 7<sup>th</sup> second <b>[1 1 1 1 1 1 1 0 0 0]</b></p> 
+  <p>Total time taken = <b>7</b> seconds</p> 
+  <p><b>Test case 2:</b></p> 
+  <p>Initially, student's arrangement is <b>[0 1 0 1 1]</b></p> 
+  <p>After 1<sup>st</sup> second <b>[1 0 1 0 1]</b></p> 
+  <p>After 2<sup>nd</sup> second <b>[1 1 0 1 0]</b></p> 
+  <p>After 3<sup>rd</sup> second <b>[1 1 1 0 0]</b></p> 
+  <p>Total time taken = <b>3</b> seconds</p> 
+ </div> 
+ <hr> 
+ <table cellspacing="0" cellpadding="0" align="left"> 
+  <tbody>
+   <tr> 
+    <td width="14%">Author:</td> 
+    <td><a href="/users/admin2">admin2</a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Tester:</td> 
+    <td><a href="/users/mgch"><span class="rating" style="display: inline-block; 
+                    font-size: 10px; 
+                    background: #FF7F00;
+                    padding: 0 3px; 
+                    line-height: 1.3; 
+                    color: white;
+                    margin-right: 2px;">6★</span><span>mgch</span></a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Tags</td> 
+    <td><a class="problem-tag-small " href="/tags/problems/admin2">admin2</a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Date Added:</td> 
+    <td>1-02-2017</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Time Limit:</td> 
+    <td>1 sec</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Source Limit:</td> 
+    <td>50000 Bytes</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Languages:</td> 
+    <td>C, CPP14, JAVA, PYTH, PYTH 3.5, PYPY, CS2, PAS fpc, PAS gpc, RUBY, PHP, GO, NODEJS, HASK, SCALA, D, PERL, FORT, WSPC, ADA, CAML, ICK, BF, ASM, CLPS, PRLG, ICON, SCM qobi, PIKE, ST, NICE, LUA, BASH, NEM, LISP sbcl, LISP clisp, SCM guile, JS, ERL, TCL, PERL6, TEXT, SCM chicken, CLOJ, FS</td> 
+   </tr> 
+  </tbody>
+ </table> 
+ <p style="clear:left;"><br></p> 
+ <ul class="button-list button-list-left"> 
+  <li style="display:"><a href="/submit/CHEFBEST">Submit</a></li> 
+ </ul> 
+ <hr> 
+ <h2 style="text-decoration: none;">Comments</h2> 
+ <ul class="links inline">
+  <li class="comment_forbidden first last"><span><i><strong>Please login at the top to post a comment.</strong></i><p></p></span></li> 
+ </ul>
+</div>

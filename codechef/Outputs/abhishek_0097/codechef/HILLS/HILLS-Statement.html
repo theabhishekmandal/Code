@@ -1,0 +1,114 @@
+<div id="node-9690290" class="node clear-block"> 
+ <div class="meta"> 
+ </div> 
+ <div class="content"> 
+  <h3>All submissions for this problem are available.</h3>
+  <h3>Read problems statements in <a target="_blank" href="http://www.codechef.com/download/translated/LTIME57/mandarin/HILLS.pdf">Mandarin chinese</a>, <a target="_blank" href="http://www.codechef.com/download/translated/LTIME57/russian/HILLS.pdf">Russian</a> and <a target="_blank" href="http://www.codechef.com/download/translated/LTIME57/vietnamese/HILLS.pdf">Vietnamese</a> as well.</h3> 
+  <p>There are <b>N</b> hills in a row numbered 1 through <b>N</b> from left to right. Each hill has a height; for each valid <b>i</b>, the height of the <b>i</b>-th hill is <b>H<sub>i</sub></b>. Chef is initially on the leftmost hill (hill number 1). He can make an arbitrary number of jumps (including zero) as long as the following conditions are satisfied: </p>
+  <ul> 
+   <li>Chef can only jump from each hill to the next hill, i.e. from the <b>i</b>-th hill, he can jump to the <b>i+1</b>-th hill (if it exists).</li> 
+   <li>It's always possible to jump to a hill with the same height as the current hill.</li> 
+   <li>It's possible to jump to a taller hill if it's higher than the current hill by no more than <b>U</b>.</li> 
+   <li>It's possible to jump to a lower hill if it's lower than the current hill by no more than <b>D</b>.</li> 
+   <li>Chef can use a parachute and jump to a <b>lower</b> hill regardless of its height (as long as it's lower than the current hill). This jump can only be performed at most once.</li> 
+  </ul> 
+  <p></p> 
+  <p>Chef would like to move as far right as possible. Determine the index of the rightmost hill Chef can reach.</p> 
+  <h3>Input</h3> 
+  <ul> 
+   <li>The first line of the input contains a single integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</li> 
+   <li>The first line of each test case contains three space-separated integers <b>N</b>, <b>U</b> and <b>D</b>.</li> 
+   <li>The second line contains <b>N</b> space-separated integers <b>H<sub>1</sub>, H<sub>2</sub>, ..., H<sub>N</sub></b>.</li> 
+  </ul> 
+  <h3>Output</h3> 
+  <p>For each test case, print a single line containing one integer — the index of the rightmost reachable hill.</p> 
+  <h3>Constraints</h3> 
+  <ul> 
+   <li>1 ≤ <b>T</b> ≤ 100</li> 
+   <li>1 ≤ <b>N</b> ≤ 100</li> 
+   <li>1 ≤ <b>U</b>, <b>D</b> ≤ 1,000,000</li> 
+   <li>1 ≤ <b>H<sub>i</sub></b> ≤ 1,000,000 for each valid <b>i</b></li> 
+  </ul> 
+  <h3>Subtasks</h3> 
+  <p> <b>Subtask #1 (100 points):</b> original constraints </p> 
+  <h3>Example</h3> 
+  <pre><b>Input:</b>
+
+3
+5 3 2
+2 5 2 6 3
+5 2 3
+4 4 4 4 4
+5 2 7
+1 4 3 2 1
+
+<b>Output:</b>
+
+3
+5
+1
+</pre> 
+  <h3>Explanation</h3> 
+  <p><b>Example case 1:</b> Chef can jump to second hill because it's higher by no more than <b>U</b>=3 than first hill, to jump to third hill Chef has to use parachute because it's lower than second hill by 3 which is more than <b>D</b>=2, Chef can't jump to fourth hill because it's higher than third hill by 4 which is more than <b>U</b>=3</p> 
+  <p><b>Example case 2:</b> All hills are of the same height, so chef can reach the last hill with no problems.</p> 
+  <p><b>Example case 3:</b> Chef can't jump to second hill because it's too high for him</p> 
+ </div> 
+ <hr> 
+ <table cellspacing="0" cellpadding="0" align="left"> 
+  <tbody>
+   <tr> 
+    <td width="14%">Author:</td> 
+    <td><a href="/users/kingofnumbers"><span class="rating" style="display: inline-block; 
+                    font-size: 10px; 
+                    background: #FF7F00;
+                    padding: 0 3px; 
+                    line-height: 1.3; 
+                    color: white;
+                    margin-right: 2px;">6★</span><span>kingofnumbers</span></a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Tester:</td> 
+    <td><a href="/users/mgch"><span class="rating" style="display: inline-block; 
+                    font-size: 10px; 
+                    background: #FF7F00;
+                    padding: 0 3px; 
+                    line-height: 1.3; 
+                    color: white;
+                    margin-right: 2px;">6★</span><span>mgch</span></a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Editorial</td> 
+    <td><a href="https://discuss.codechef.com/problems/HILLS">https://discuss.codechef.com/problems/HILLS</a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Tags</td> 
+    <td><a class="problem-tag-small " href="/tags/problems/cakewalk">cakewalk</a>, <a class="problem-tag-small " href="/tags/problems/greedy">greedy</a>, <a class="problem-tag-small " href="/tags/problems/kingofnumbers">kingofnumbers</a>, <a class="problem-tag-small " href="/tags/problems/ltime57">ltime57</a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Date Added:</td> 
+    <td>21-02-2018</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Time Limit:</td> 
+    <td>0.5 sec</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Source Limit:</td> 
+    <td>50000 Bytes</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Languages:</td> 
+    <td>C, CPP14, JAVA, PYTH, PYTH 3.5, PYPY, CS2, PAS fpc, PAS gpc, RUBY, PHP, GO, NODEJS, HASK, rust, SCALA, swift, D, PERL, FORT, WSPC, ADA, CAML, ICK, BF, ASM, CLPS, PRLG, ICON, SCM qobi, PIKE, ST, NICE, LUA, BASH, NEM, LISP sbcl, LISP clisp, SCM guile, JS, ERL, TCL, kotlin, PERL6, TEXT, SCM chicken, CLOJ, COB, FS</td> 
+   </tr> 
+  </tbody>
+ </table> 
+ <p style="clear:left;"><br></p> 
+ <ul class="button-list button-list-left"> 
+  <li style="display:"><a href="/submit/HILLS">Submit</a></li> 
+ </ul> 
+ <hr> 
+ <h2 style="text-decoration: none;">Comments</h2> 
+ <ul class="links inline">
+  <li class="comment_forbidden first last"><span><i><strong>Please login at the top to post a comment.</strong></i><p></p></span></li> 
+ </ul>
+</div>

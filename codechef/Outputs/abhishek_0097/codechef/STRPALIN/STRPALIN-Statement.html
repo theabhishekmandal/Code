@@ -1,0 +1,115 @@
+<div id="node-9674722" class="node clear-block"> 
+ <div class="meta"> 
+ </div> 
+ <div class="content"> 
+  <h3>All submissions for this problem are available.</h3>
+  <h3> Read problems statements in <a target="_blank" href="http://www.codechef.com/download/translated/MARCH16/mandarin/STRPALIN.pdf">Mandarin Chinese</a>, <a target="_blank" href="http://www.codechef.com/download/translated/MARCH16/russian/STRPALIN.pdf">Russian</a> and <a target="_blank" href="http://www.codechef.com/download/translated/MARCH16/vietnamese/STRPALIN.pdf">Vietnamese</a> as well.</h3> 
+  <p>Chef likes strings a lot but he likes palindromic strings more. Today, Chef has two strings <b>A</b> and <b>B</b>, each consisting of lower case alphabets. </p> 
+  <p> Chef is eager to know whether it is possible to choose some <b>non empty</b> strings <b>s1</b> and <b>s2</b> where <b>s1</b> is a substring of <b>A</b>, <b>s2</b> is a substring of <b>B</b> such that <b>s1 + s2</b> is a palindromic string. Here <b>'+'</b> denotes the concatenation between the strings.</p> 
+  <p><b>Note:</b></p> 
+  <p>A string is a palindromic string if it can be read same both forward as well as backward. To know more about palindromes click <a href="https://en.wikipedia.org/wiki/Palindrome">here</a>.</p> 
+  <h3>Input</h3> 
+  <ul> 
+   <li>First line of input contains a single integer <b>T</b> denoting the number of test cases.</li> 
+   <li>For each test case: 
+    <ul> 
+     <li>First line contains the string <b>A</b></li> 
+     <li>Second line contains the string <b>B</b>.</li> 
+    </ul> </li> 
+  </ul> 
+  <h3>Output</h3> 
+  <p>For each test case, Print <b>"Yes"</b> (without quotes) if it possible to choose such strings <b>s1 &amp; s2</b>. Print <b>"No"</b> (without quotes) otherwise.</p> 
+  <h3>Constraints</h3> 
+  <ul> 
+   <li><b>1 ≤ T ≤ 10 </b></li> 
+   <li><b>1 ≤ |A|, |B| ≤ 1000 </b></li> 
+  </ul> 
+  <h3>Subtasks 
+   <ul> 
+    <li> <b>Subtask 1:</b> <b>1 ≤ |A|, |B| ≤ 10</b> : ( 40 pts )</li> 
+    <li> <b>Subtask 2:</b> <b>1 ≤ |A|, |B| ≤ 1000</b> : ( 60 pts )</li> 
+   </ul> </h3>
+  <h3>Example</h3> 
+  <p><b>Input</b></p> 
+  <pre>
+3
+abc
+abc
+a
+b
+abba
+baab
+
+</pre>
+  <p><b>Output</b></p> 
+  <pre>
+Yes
+No
+Yes
+</pre>
+  <h3>Explanation</h3> 
+  <ul> 
+   <li><b>Test 1:</b> One possible way of choosing <b>s1 &amp; s2</b> is <b>s1 = "ab"</b>, <b>s2 = "a"</b> such that <b>s1 + s2</b> i.e <b>"aba"</b> is a palindrome.</li> 
+   <li><b>Test 2:</b> There is no possible way to choose <b>s1 &amp; s2</b> such that <b>s1 + s2</b> is a palindrome.</li> 
+   <li><b>Test 3:</b> You can figure it out yourself.</li> 
+  </ul>  
+ </div> 
+ <hr> 
+ <table cellspacing="0" cellpadding="0" align="left"> 
+  <tbody>
+   <tr> 
+    <td width="14%">Author:</td> 
+    <td><a href="/users/ma5termind"><span class="rating" style="display: inline-block; 
+                    font-size: 10px; 
+                    background: #3366CC;
+                    padding: 0 3px; 
+                    line-height: 1.3; 
+                    color: white;
+                    margin-right: 2px;">3★</span><span>ma5termind</span></a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Tester:</td> 
+    <td><a href="/users/kevinsogo"><span class="rating" style="display: inline-block; 
+                    font-size: 10px; 
+                    background: #D0011B;
+                    padding: 0 3px; 
+                    line-height: 1.3; 
+                    color: white;
+                    margin-right: 2px;">7★</span><span>kevinsogo</span></a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Editorial</td> 
+    <td><a href="http://discuss.codechef.com/problems/STRPALIN">http://discuss.codechef.com/problems/STRPALIN</a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Tags</td> 
+    <td><a class="problem-tag-small " href="/tags/problems/cakewalk">cakewalk</a>, <a class="problem-tag-small " href="/tags/problems/ma5termind">ma5termind</a>, <a class="problem-tag-small " href="/tags/problems/march16">march16</a>, <a class="problem-tag-small " href="/tags/problems/string">string</a>, <a class="problem-tag-small " href="/tags/problems/string-process">string-process</a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Date Added:</td> 
+    <td>4-11-2015</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Time Limit:</td> 
+    <td>1 sec</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Source Limit:</td> 
+    <td>50000 Bytes</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Languages:</td> 
+    <td>C, CPP14, JAVA, PYTH, PYTH 3.5, PYPY, CS2, PAS fpc, PAS gpc, RUBY, PHP, GO, NODEJS, HASK, SCALA, D, PERL, FORT, WSPC, ADA, CAML, ICK, BF, ASM, CLPS, PRLG, ICON, SCM qobi, PIKE, ST, NICE, LUA, BASH, NEM, LISP sbcl, LISP clisp, SCM guile, JS, ERL, TCL, PERL6, TEXT, SCM chicken, CLOJ, FS</td> 
+   </tr> 
+  </tbody>
+ </table> 
+ <p style="clear:left;"><br></p> 
+ <ul class="button-list button-list-left"> 
+  <li style="display:"><a href="/submit/STRPALIN">Submit</a></li> 
+ </ul> 
+ <hr> 
+ <h2 style="text-decoration: none;">Comments</h2> 
+ <ul class="links inline">
+  <li class="comment_forbidden first last"><span><i><strong>Please login at the top to post a comment.</strong></i><p></p></span></li> 
+ </ul>
+</div>

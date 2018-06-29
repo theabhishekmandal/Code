@@ -1,0 +1,97 @@
+<div id="node-157491" class="node clear-block"> 
+ <div class="meta"> 
+ </div> 
+ <div class="content"> 
+  <h3>All submissions for this problem are available.</h3> 
+  <p> As you might remember, the collector of Siruseri had ordered<br> a complete revision of the Voters List. He knew that constructing<br> the list of voters is a difficult task, prone to errors. Some<br> voters may have been away on vacation, others may have moved<br> during the enrollment and so on. </p> 
+  <p> To be as accurate as possible, he entrusted the task to three different<br> officials. Each of them was to independently record the list of voters and<br> send it to the collector. In Siruseri, every one has a ID number and<br> the list would only list the ID numbers of the voters and not their names.<br> The officials were expected to arrange the ID numbers in ascending order<br> in their lists. </p> 
+  <p> On receiving the lists, the Collector realised that there were<br> discrepancies - the three lists were not identical. He decided<br> to go with the majority. That is, he decided to construct the<br> final list including only those ID numbers that appeared in at<br> least 2 out of the 3 lists. For example if the three lists<br> were</p> 
+  <pre style="margin:10px">
+23  30  42  57  90
+21  23  35  57  90  92
+21  23  30  57  90 
+</pre>
+  <p>then the final list compiled by the collector would be:</p> 
+  <pre style="margin:10px">
+21  23  30  57  90
+</pre>
+  <p> The ID numbers 35, 42 and 92 which appeared in only one list<br> each do not figure in the final list.</p> 
+  <p> Your task is to help the collector by writing a program that<br> produces the final list from the three given lists.</p> 
+  <p style="font-weight: bold">Input format</p> 
+  <p>The first line of the input contains 3 integers<br> <em>N</em><sub>1</sub>, <em>N</em><sub>2</sub> and<br> <em>N</em><sub>3</sub>. <em>N</em><sub>1</sub> is the number of<br> voters in the first list, <em>N</em><sub>2</sub> is the number of<br> voters in the second list and <em>N</em><sub>3</sub> is the number of<br> voters in the third list. The next <em>N</em><sub>1</sub> lines<br> (lines 2,...,<em>N</em><sub>1</sub>+1) contain one positive integer<br> each and describe the first list in ascending order. The following</p> 
+  <p><em>N</em><sub>2</sub> lines (lines<br> <em>N</em><sub>1</sub>+2,...,<em>N</em><sub>1</sub>+<em>N</em><sub>2</sub>+1)<br> describe the second list in ascending order and the final<br> <em>N</em><sub>3</sub> lines (lines</p> 
+  <p><em>N</em><sub>1</sub>+<em>N</em><sub>2</sub>+2,...,<em>N</em><sub>1</sub>+<em>N</em><sub>2</sub>+<em>N</em><sub>3</sub>+1)<br> describe the third list in ascending order.</p> 
+  <p style="font-weight: bold">Output format</p> 
+  <p>The first line of the output should contain a single integer<br> <em>M</em> indicating the number voters in the final list. The next<br> <em>M</em> lines (lines 2,...,<em>M</em>+1) should contain one<br> positive integer each, describing the list of voters in the final<br> list, in ascending order.</p> 
+  <p style="font-weight: bold">Test data</p> 
+  <p>You may assume that 1 ≤<br> <em>N</em><sub>1</sub>,<em>N</em><sub>2</sub>,<em>N</em><sub>3</sub><br> ≤ 50000. </p> 
+  <p style="font-weight: bold">Example</p> 
+  <p style="font-weight: bold">Sample input:</p> 
+  <pre style="margin:0px">
+5 6 5
+23
+30
+42
+57
+90
+21 
+23 
+35 
+57 
+90 
+92 
+21 
+23 
+30 
+57 
+90 
+</pre>
+  <p style="font-weight: bold">Sample output:</p> 
+  <pre style="margin:0px">
+5
+21 
+23 
+30 
+57 
+90
+</pre> 
+ </div> 
+ <hr> 
+ <table cellspacing="0" cellpadding="0" align="left"> 
+  <tbody>
+   <tr> 
+    <td width="14%">Author:</td> 
+    <td><a href="/users/admin">admin</a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Tags</td> 
+    <td><a class="problem-tag-small " href="/tags/problems/admin">admin</a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Date Added:</td> 
+    <td>30-07-2009</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Time Limit:</td> 
+    <td>1.15243 sec</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Source Limit:</td> 
+    <td>50000 Bytes</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Languages:</td> 
+    <td>C, CPP14, JAVA, PYTH, PYTH 3.5, PYPY, CS2, PAS fpc, PAS gpc, RUBY, PHP, GO, NODEJS, HASK, rust, SCALA, swift, D, PERL, FORT, WSPC, ADA, CAML, ICK, BF, ASM, CLPS, PRLG, ICON, SCM qobi, PIKE, ST, NICE, LUA, BASH, NEM, LISP sbcl, LISP clisp, SCM guile, JS, kotlin, PERL6, TEXT, SCM chicken, CLOJ, COB, FS</td> 
+   </tr> 
+  </tbody>
+ </table> 
+ <p style="clear:left;"><br></p> 
+ <ul class="button-list button-list-left"> 
+  <li style="display:"><a href="/submit/VOTERS">Submit</a></li> 
+ </ul> 
+ <hr> 
+ <h2 style="text-decoration: none;">Comments</h2> 
+ <ul class="links inline">
+  <li class="comment_forbidden first last"><span><i><strong>Please login at the top to post a comment.</strong></i><p></p></span></li> 
+ </ul>
+</div>

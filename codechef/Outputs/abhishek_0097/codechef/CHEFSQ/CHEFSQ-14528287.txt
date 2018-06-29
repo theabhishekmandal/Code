@@ -1,0 +1,17 @@
+t = int(input().strip())
+while t > 0:
+    first = int(input().strip())
+    given = list(map(int, input().strip().split(' ')))
+    second=int(input().strip())
+    favorite = list(map(int, input().strip().split(' ')))
+    count=0
+    for i in  given:
+        if i==favorite[0]:
+            favorite.pop(0)
+            if len(favorite)==0:
+                break
+    if(favorite):
+        print("No")
+    else:
+        print("Yes")
+    t-=1

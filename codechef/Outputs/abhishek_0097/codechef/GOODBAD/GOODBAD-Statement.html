@@ -1,0 +1,95 @@
+<div id="node-9688495" class="node clear-block"> 
+ <div class="meta"> 
+ </div> 
+ <div class="content"> 
+  <h3>All submissions for this problem are available.</h3>
+  <p>Chef is a really nice and respectful person, in sharp contrast to his little brother, who is a very nasty and disrespectful person. Chef always sends messages to his friends in all small letters, whereas the little brother sends messages in all capital letters.</p> 
+  <p>You just received a message given by a string <b>s</b>. You don't know whether this message is sent by Chef or his brother. Also, the communication channel through which you received the message is erroneous and hence can flip a letter from uppercase to lowercase or vice versa. However, you know that this channel can make at most <b>K</b> such flips.</p> 
+  <p>Determine whether the message could have been sent only by Chef, only by the little brother, by both or by none.</p> 
+  <h3>Input</h3> 
+  <p></p>
+  <ul> 
+   <li>The first line of the input contains a single integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</li> 
+   <li>The first line of each test case contains two space-separated integers <b>N</b> and <b>K</b> denoting the length of the string <b>s</b> and the maximum number of flips that the erroneous channel can make.</li> 
+   <li>The second line contains a single string <b>s</b> denoting the message you received.</li> 
+  </ul>
+  <p></p> 
+  <h3>Output</h3> 
+  <p>For each test case, output a single line containing one string — "chef", "brother", "both" or "none".</p> 
+  <h3>Constraints</h3> 
+  <ul> 
+   <li>1 ≤ <b>T</b> ≤ 1000</li> 
+   <li>1 ≤ <b>N</b> ≤ 100</li> 
+   <li>0 ≤ <b>K</b> ≤ <b>N</b></li> 
+   <li><b>s</b> consists only of (lowercase and uppercase) English letters</li> 
+  </ul> 
+  <h3>Example</h3> 
+  <pre>
+<b>Input</b>
+
+4
+5 1
+frauD
+5 1
+FRAUD
+4 4
+Life
+10 4
+sTRAWBerry
+
+<b>Output</b>
+
+chef
+brother
+both
+none
+</pre> 
+  <h3>Explanation</h3> 
+  <p><b>Example case 1:</b> Only one flip is possible. So it is possible that Chef sent "fraud" and the channel flipped the last character to get "frauD". However, it is not possible for the brother to have sent "FRAUD", because then it would need 4 flips. Hence the answer is "chef".</p> 
+  <p><b>Example case 2:</b> Only one flip is possible. So it is possible that the brother sent "FRAUD" and the channel didn't flip anything. However, it is not possible for Chef to have sent "fraud", because then it would need 5 flips. Hence the answer is "brother".</p> 
+  <p><b>Example case 3:</b> Four flips are allowed. It is possible that Chef sent "life" and the channel flipped the first character to get "Life". It is also possible that the brother sent "LIFE" and the channel flipped the last three characters to get "Life". Hence the answer is "both".</p> 
+  <p><b>Example case 4:</b> Four flips are allowed. It is not possible that Chef sent "strawberry", because it would need five flips to get "sTRAWBerry". It is also not possible that the brother sent "STRAWBERRY", because that would also need five flips. Hence the answer is "none".</p> 
+ </div> 
+ <hr> 
+ <table cellspacing="0" cellpadding="0" align="left"> 
+  <tbody>
+   <tr> 
+    <td width="14%">Author:</td> 
+    <td><a href="/users/admin2">admin2</a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Editorial</td> 
+    <td><a href="https://discuss.codechef.com/problems/GOODBAD">https://discuss.codechef.com/problems/GOODBAD</a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Tags</td> 
+    <td><a class="problem-tag-small " href="/tags/problems/acm17chn">acm17chn</a>, <a class="problem-tag-small " href="/tags/problems/admin2">admin2</a>, <a class="problem-tag-small " href="/tags/problems/cakewalk">cakewalk</a>, <a class="problem-tag-small " href="/tags/problems/chn17rol">chn17rol</a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Date Added:</td> 
+    <td>7-12-2017</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Time Limit:</td> 
+    <td>1 sec</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Source Limit:</td> 
+    <td>50000 Bytes</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Languages:</td> 
+    <td>C, CPP14, JAVA, PYTH, PYTH 3.5, PYPY, CS2, PAS fpc, PAS gpc, RUBY, PHP, GO, NODEJS, HASK, rust, SCALA, swift, D, PERL, FORT, WSPC, ADA, CAML, ICK, BF, ASM, CLPS, PRLG, ICON, SCM qobi, PIKE, ST, NICE, LUA, BASH, NEM, LISP sbcl, LISP clisp, SCM guile, JS, ERL, TCL, kotlin, PERL6, TEXT, SCM chicken, CLOJ, COB, FS</td> 
+   </tr> 
+  </tbody>
+ </table> 
+ <p style="clear:left;"><br></p> 
+ <ul class="button-list button-list-left"> 
+  <li style="display:"><a href="/submit/GOODBAD">Submit</a></li> 
+ </ul> 
+ <hr> 
+ <h2 style="text-decoration: none;">Comments</h2> 
+ <ul class="links inline">
+  <li class="comment_forbidden first last"><span><i><strong>Please login at the top to post a comment.</strong></i><p></p></span></li> 
+ </ul>
+</div>

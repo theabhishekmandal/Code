@@ -126,9 +126,7 @@ public class Main
             br.append('\n');
         }
         else
-        {
             path(arr, visited, arr[src], des, store, i + 1);
-        }
     }
     
  }

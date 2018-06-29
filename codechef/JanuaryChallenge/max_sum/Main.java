@@ -92,25 +92,32 @@ public class Main
 		while(t-- > 0)
 		solve(s);
     }
-    private static void solve(FastReader s)
-    {
+    private static void solve(FastReader s){
         int n = s.ni();
-        long arr[][] = new int[n][n];
-        for(int i = 0 ; i < arr.length; i++)
-        {
-            for(int j = 0 ; j < arr[i].length; j++)
-            {
-            	arr[j] = s.nl();
+        int arr[][] = new int[n][n];
+        for(int i = 0 ; i < n; i++){
+            for(int j = 0; j < n; j++){
+                arr[i][j] = s.ni();
             }
         }
-        long count = 0 ;
-        for(int i = 0  i < arr.length; i++)
-        {
-        	for(int j = 0 ; j < arr[i].length; j++)
-        	{
-        		if(j == )
-        	}
+        long ans = 0;
+        int after = maxint;
+        for(int i = n - 1 ;i >= 0; i--){
+            int min = minint;
+            for(int j = n - 1 ; j >= 0; j--){
+                if(arr[i][j] < after){
+                    min = Math.max(arr[i][j], min);
+                }
+            }
+            if(min == minint){
+                ans = -1;
+                break;
+            }
+            after = min;
+            ans += min;
         }
+        out.println(ans);
+
     }
     
  }

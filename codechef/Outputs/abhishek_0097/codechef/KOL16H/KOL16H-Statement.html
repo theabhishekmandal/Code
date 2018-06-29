@@ -1,0 +1,70 @@
+<div id="node-9679972" class="node clear-block"> 
+ <div class="meta"> 
+ </div> 
+ <div class="content"> 
+  <h3>All submissions for this problem are available.</h3>
+  <p>Mr. Wire Less is not that good at implementing circuit in a breadboard. In his Digital Logic Design course, he has to implement several boolean functions using the breadboard. In a breadboard, inputs are given through the switches and outputs are taken through the LEDs. Each input switch can be either in ground state or in high state. So, if he wishes to implement a boolean function, <b>f(x<sub>1</sub>, x<sub>2</sub>, .., x<sub>n</sub>)</b> that takes <b>n</b> boolean values as input and returns <b>m</b> boolean values as output, he will use <b>n</b> switches and <b>m</b> LEDs. </p> 
+  <p>Mr. Wire Less can quickly assemble the necessary ICs and wires, but the key problem is testing. While testing he has to check with all possible input combination, to make sure whether the output of LED corresponds to the expected output or not. This is taking too long for him, as most of the switches are jammed and difficult to toggle. </p> 
+  <p>Mr. Wire Less is asking for help to minimize his time of testing. So, your task is to minimize the total number of switch-toggle throughout the testing.</p> 
+  <p>For example, if Mr. Wire Less has to test a function <b>f(x0, x1)</b> of two variables, he may choose this switching-sequence for testing <b>00, 11, 10, 01</b>. In this case, the total number of switch-toggle will be <b>2+1+2 = 5</b>. But if he tests in this sequence <b>00, 10, 11, 01</b> total number of toggle will be <b>1+1+1 = 3</b>.</p> 
+  <p>Given <b>n</b>, you have to output the minimum number of toggle needed for complete testing. Though it seems impractical, he wants you to solve the problem for a very large value of <b>n</b>. But, then the toggle value can be quite big. So, he is completely okay with the toggle value modulo <b>8589934592 (2<sup>33</sup>)</b>.</p>  
+  <h3>Input</h3> 
+  <p>The first line of the input contains a positive integer <b>T(T ≤ 10<sup>5</sup>)</b>, denoting the number of test-case. Each of the following <b>T</b> lines contains a single non-negative integer <b>n(n ≤ 10<sup>20</sup>)</b>.</p>
+  <p> </p>
+  <h3>Output</h3> 
+  <p></p>
+  <p>For every test-case, output a single containing test-case number and the minimum number of switch-toggle modulo <b>8589934592 (2<sup>33</sup>)</b>.</p> 
+  <h3>Sample</h3> 
+  <pre><b>Input</b>   
+2
+1
+2
+
+<b>Output</b>
+Case 1: 1
+Case 2: 3
+</pre> 
+ </div> 
+ <hr> 
+ <table cellspacing="0" cellpadding="0" align="left"> 
+  <tbody>
+   <tr> 
+    <td width="14%">Author:</td> 
+    <td><a href="/users/kol_adm">kol_adm</a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Editorial</td> 
+    <td><a href="https://discuss.codechef.com/problems/KOL16H">https://discuss.codechef.com/problems/KOL16H</a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Tags</td> 
+    <td><a class="problem-tag-small " href="/tags/problems/acm16kol">acm16kol</a>, <a class="problem-tag-small " href="/tags/problems/binary">binary</a>, <a class="problem-tag-small " href="/tags/problems/easy">easy</a>, <a class="problem-tag-small " href="/tags/problems/kol_adm">kol_adm</a></td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Date Added:</td> 
+    <td>21-12-2016</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Time Limit:</td> 
+    <td>2 sec</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Source Limit:</td> 
+    <td>50000 Bytes</td> 
+   </tr> 
+   <tr> 
+    <td width="14%">Languages:</td> 
+    <td>C, CPP14, JAVA, PYTH, PYTH 3.5</td> 
+   </tr> 
+  </tbody>
+ </table> 
+ <p style="clear:left;"><br></p> 
+ <ul class="button-list button-list-left"> 
+  <li style="display:"><a href="/submit/KOL16H">Submit</a></li> 
+ </ul> 
+ <hr> 
+ <h2 style="text-decoration: none;">Comments</h2> 
+ <ul class="links inline">
+  <li class="comment_forbidden first last"><span><i><strong>Please login at the top to post a comment.</strong></i><p></p></span></li> 
+ </ul>
+</div>

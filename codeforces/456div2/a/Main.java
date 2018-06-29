@@ -10,22 +10,6 @@ public class Main
     private static long stop;
     private static int maxint = Integer.MAX_VALUE;
     private static int minint = Integer.MIN_VALUE;
-    public static void main(String args[]) throws IOException
-    {
-		FastReader s = new FastReader();
-	//	int t = s.ni();
-	//	while(t-- > 0)
-		solve(s);
-    }
-    private static void solve(FastReader s)
-    {
-       BigInteger big = new BigInteger(s.ns());
-       int arr[] = {6, 8, 4, 2};
-       if(big.intValue() != 0)
-       out.println(arr[big.mod(new BigInteger("4")).intValue()]);
-       else
-       out.println(1);
-    }
 	@SuppressWarnings({"unchecked", "varargs"})
     private static <T> void debug(T... a)
     {
@@ -91,16 +75,32 @@ public class Main
         String k="";
 	    try
         {
-	k=br.readLine();
+	       k=br.readLine();
         }
         catch(Exception e)
         {
 
-	e.printStackTrace();
+	       e.printStackTrace();
         }
-        return k;
+    return k;
 
     }
+    }
+    public static void main(String args[]) throws IOException
+    {
+        FastReader s = new FastReader();
+    //  int t = s.ni();
+    //  while(t-- > 0)
+        solve(s);
+    }
+    private static void solve(FastReader s)
+    {
+       BigInteger big = new BigInteger(s.ns());
+       int arr[] = {6, 8, 4, 2};
+       if(big.intValue() != 0)
+       out.println(arr[big.mod(new BigInteger("4")).intValue()]);
+       else
+       out.println(1);
     }
     
  }

@@ -1,0 +1,16 @@
+t=int(input().strip())
+while t>0:
+    n=int(input().strip())
+    correct=list(input().strip())
+    candid=list(input().strip())
+
+    count=0
+    amount=list(map( int,(input().strip().split(' '))))
+    for j in range(len(correct)):
+        if correct[j]==candid[j]:
+            count+=1
+    if(count==len(correct)):
+        print(amount[count])
+    else:
+       print(max(amount[:count+1:]))
+    t-=1

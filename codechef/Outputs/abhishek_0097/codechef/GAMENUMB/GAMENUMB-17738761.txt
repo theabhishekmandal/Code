@@ -1,0 +1,18 @@
+if __name__ == '__main__':
+	for _ in range(int(input().strip())):
+		n, k = map(int ,input().strip().split(' '))
+		a = list(map(int, input().strip().split(' ')))
+		d = list(map(int, input().strip().split(' ')))
+		total = []
+		for i in range(len(d)):
+			total.extend([a[i]] * d[i])
+		b = list(map(int, input().strip().split(' ')))
+		start = 0
+		end = len(total)
+		total.sort()
+		for i in range(len(b)):
+			if i % 2 == 0:
+				start = end - b[i]
+			else:
+				end = start + b[i]
+		print(sum(total[start:end]))

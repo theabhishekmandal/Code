@@ -2,127 +2,110 @@ import java.util.*;
 import java.io.*;
 import java.math.*;
 import java.util.regex.*;
-public class Main
-{
-    private static PrintWriter out = new PrintWriter(System.out,true);
-    private static PrintWriter err = new PrintWriter(System.err,true);
-    private static long start;
-    private static long stop;
-    private static int maxint = Integer.MAX_VALUE;
-    private static int minint = Integer.MIN_VALUE;
-    public static void main(String args[]) throws IOException
-    {
-		FastReader s = new FastReader();
-		int t = s.ni();
-		while(t-- > 0)
-		solve(s);
-    }
-    private static int[] arr = new int[10000001];
-    private static void solve(FastReader s)
-    {
-    	int one = s.ni();
-    	int two = s.ni();
-    	int max = minint;
-    	for(int i = one; i <= two; i++)
-    	{
-    		int count = getval(i);
-    		if(count > max)
-    			max = count;
-    	}
-    	out.println(max);
-    }
-    private static int getval(int ans)
-    {
-    	if(arr[ans] == 0)
-    	{
-    		if(ans & 1 == 0)
-    		{
-    			arr[ans] = 1 + getval(ans >> 1);
-    			return arr[ans];
-    		}
-    		else
-    		{
-    			arr[ans] = 2 + getval((3 * ans + 1) >> 1);
-    			return arr[ans];
-    		}
-    	}
-    	return arr[ans];
-    }
-	@SuppressWarnings({"unchecked", "varargs"})
-    private static <T> void debug(T... a)
-    {
-    	err.println(Arrays.deepToString(a));
-    }
-    private static void starttime()
-    {
-    	start = System.currentTimeMillis();
-    }
-    private static void stoptime()
-    {
-    	stop = System.currentTimeMillis();
-    }
-    private static void gettime()
-    {
-    	out.println(stop - start);
-    }
+import static java.lang.System.*;
+public class Main{
 
-    static class FastReader
-    {
-    StringTokenizer st;
-    BufferedReader br;
-    FastReader()
-    {
-        br=new BufferedReader(new InputStreamReader(System.in));
+    static long start;
+    static long stop;
+    static int maxint = Integer.MAX_VALUE;
+    static int minint = Integer.MIN_VALUE;
+    static long mod = 1000000000L + 7L;
+    static void debug(Object... a){
+        err.println(Arrays.deepToString(a));
     }
-    String n()
-	{
-        while(st==null||!st.hasMoreElements())
-	{
-	    try
-	    {
-	    st=new StringTokenizer(br.readLine());
-	    }
-	    catch(Exception e)
-	    {
-	    e.printStackTrace();
-	    }
+    static void starttime(){start = currentTimeMillis();}
+    static void stoptime(){stop = currentTimeMillis();}
+    static void gettime(){err.println(((double)(stop - start) / 1000.0) + " seconds");}
+
+    static class FastReader{
+        StringTokenizer st;
+        BufferedReader br;
+        FastReader(){
+            br = new BufferedReader(new InputStreamReader(in));
+        }
+        String n(){
+            while(st == null || !st.hasMoreElements()){
+                try{
+                    st = new StringTokenizer(br.readLine());
+                }
+                catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+            return st.nextToken();
+        }
+
+        int ni(){
+            return Integer.parseInt(n());
+        }
+        float nf(){
+            return Float.parseFloat(n());
+        }
+
+        double nd(){
+            return Double.parseDouble(n());
+        }
+        long nl(){
+            return Long.parseLong(n());
+        }
+        String ns(){
+            String k="";
+            try{
+                k = br.readLine();
+            }
+            catch(Exception e){
+
+                e.printStackTrace();
+            }
+            return k;
+
+        }
+    }
+    static class pair<First, Second>{
+		First first;
+		Second second;
+		pair(First first,Second second){
+			this.first = first;
+			this.second = second;
+		}
+		@Override
+		public String toString(){
+			return (first + " " + second);
+		}
+		@Override
+		public boolean equals(Object o){
+			if(this == o)
+				return true;
+			if(o == null || getClass() != o.getClass())
+				return false;
+			pair<?,?> pair = (pair<?, ?>) o;
+			if(!first.equals(pair.first)) return false;
+			return second.equals(pair.second);
+		}
+		@Override
+		public int hashCode(){
+			return 31 * first.hashCode() + second.hashCode();
+		}
 	}
-	    return st.nextToken();
-    }
-
-    int ni()
-    {
-        return Integer.parseInt(n());
-    }
-    float nf()
-    {
-        return Float.parseFloat(n());
-    }
-
-    double nd()
-    {
-        return Double.parseDouble(n());
-    }
-
-    long nl()
-    {
-        return Long.parseLong(n());
-    }
-    String ns()
-    {
-        String k="";
-	    try
-        {
-			k=br.readLine();
-        }
-        catch(Exception e)
-        {
-
-			e.printStackTrace();
-        }
-        return k;
-
-    }
-   }
     
- }
+    public static void main(String args[]) throws IOException{
+        FastReader in = new FastReader();
+    //    int t = in.ni();
+    //    for(int test = 1; test <= t; test++)
+            solve(in); //, test);
+    }
+    static void solve(FastReader in){
+        int t = in.ni();
+        while(t-- > 0){
+            int n = in.ni();
+            int a = in.ni();
+            int b = in.ni();
+            int arr[] = new int[n];
+            Set<Integer> blah = new HashSet<>();
+            for(int i = 0; i < arr.length; i++) blah.add(in.ni());
+            double ans = ((double) a / (double) blah.size()) * ((double) b / (double) blah.size());
+            out.printf("%.10d", ans);
+
+        }
+    }
+}
