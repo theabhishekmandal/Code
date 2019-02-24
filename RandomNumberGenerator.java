@@ -1,11 +1,9 @@
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.*;
 public class RandomNumberGenerator{
 	public static void main(String args[]){
-		int min = Integer.parseInt(args[0]);
-		int max = Integer.parseInt(args[1]);
-		int range = Integer.parseInt(args[2]);
-		System.out.println(range);
-		for(int i = 0; i < range; i++)
-			System.out.print(ThreadLocalRandom.current().nextInt(min, max + 1) + " ");
+		Scanner s = new Scanner(System.in);
+		String string = s.nextLine();
+		System.out.println(string.matches("^[a-zA-Z0-9_+&*-]+(?:\\." + "[a-zA-Z0-9_+&*-]+)*@" + "(?:[a-zA-Z0-9-]+\\.)+[a-z"+ "A-Z]{2,7}$"));
 	}
 }

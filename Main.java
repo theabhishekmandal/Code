@@ -5,11 +5,7 @@ import java.util.regex.*;
 import static java.lang.System.*;
 public class Main{
 
-    static long start;
-    static long stop;
-    static int maxint = Integer.MAX_VALUE;
-    static int minint = Integer.MIN_VALUE;
-    static long mod = 1000000000L + 7L;
+    static long start, stop, mod = (long) 1e9 + 7L;
     static void debug(Object... a){
         err.println(Arrays.deepToString(a));
     }
@@ -68,6 +64,12 @@ public class Main{
 			this.first = first;
 			this.second = second;
 		}
+		public First getFirst(){
+			return this.first;
+		}
+		public Second getSecond(){
+			return this.second;
+		}
 		@Override
 		public String toString(){
 			return (first + " " + second);
@@ -90,22 +92,12 @@ public class Main{
     
     public static void main(String args[]) throws IOException{
         FastReader in = new FastReader();
-    //    int t = in.ni();
-    //    for(int test = 1; test <= t; test++)
-            solve(in); //, test);
+        	starttime();
+            solve(in);
+            stoptime();
+            //gettime();
     }
     static void solve(FastReader in){
-        int t = in.ni();
-        while(t-- > 0){
-            int n = in.ni();
-            int a = in.ni();
-            int b = in.ni();
-            int arr[] = new int[n];
-            Set<Integer> blah = new HashSet<>();
-            for(int i = 0; i < arr.length; i++) blah.add(in.ni());
-            double ans = ((double) a / (double) blah.size()) * ((double) b / (double) blah.size());
-            out.printf("%.10d", ans);
-
-        }
+              
     }
 }

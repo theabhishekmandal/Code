@@ -6,7 +6,7 @@ import static java.lang.System.*;
 public class Main{
 public static void main(String[] args) {
     Scanner s = new Scanner(in);
-        String hel = s.next();
+        String hel = s. next();
         int arr[] = new int[26];
         for(int i = 0; i < hel.length(); i++)
             arr[hel.charAt(i) - 'a']++;
