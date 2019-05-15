@@ -5,7 +5,7 @@ public class Main{
     static void starttime(){start = currentTimeMillis();}
     static void stoptime(){stop = currentTimeMillis();}
     static void gettime(){err.println(((double)(stop - start) / 1000.0) + " seconds");}
-
+    // This is not fast as division operator takes time
     private static List<Integer> fastPrime1(int num){
         boolean[] prime = new boolean[num + 1];
         Arrays.fill(prime, true);
@@ -29,6 +29,7 @@ public class Main{
         return list;
     }
 
+    // This is fast because no division is taking place
     private static List<Integer> fastPrime2(int num){
         boolean[] prime = new boolean[num + 1];
         Arrays.fill(prime, true);
@@ -51,6 +52,9 @@ public class Main{
         stoptime();
         out.println(list1);
         gettime();
-        //List<Integer> list2 = fastPrime2(10000000);
+        starttime();
+        List<Integer> list2 = fastPrime2(10000000);
+        stoptime();
+        gettime();
     }
 }
