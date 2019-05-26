@@ -82,8 +82,8 @@ public class Main{
         Scanner s = new Scanner(System.in);
         int size = s.nextInt();
         float mini = Float.MAX_VALUE;
-        Map<Float, Integer> map = new TreeMap<>();
-        Map<String, Float> arr = new TreeMap<>();
+        Map<Float, Integer> map = new TreeMap<>(); // required to find the 2nd smallest marks
+        Map<String, Float> arr = new TreeMap<>();  // required so as the name in the output comes in alphabetical order
         for(int i = 0; i < size; i++){
             String name = s.next().trim();
             float marks = s.nextFloat();
