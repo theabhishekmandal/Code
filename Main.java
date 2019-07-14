@@ -57,9 +57,10 @@ public class Main{
 
         }
     }
-    static class pair<First, Second>{
-		First first;
-		Second second;
+    static class pair<First extends Comparable<? super First>,
+     Second extends Comparable<? super Second>> implements Comparable<pair<First, Second>>{
+		public final First first;
+		public final Second second;
 		pair(First first,Second second){
 			this.first = first;
 			this.second = second;
@@ -72,8 +73,13 @@ public class Main{
 		}
 		@Override
 		public String toString(){
-			return (first + " " + second);
-		}
+			return  "[" + first + " " + second + "]";
+        }
+        @Override
+        public int compareTo(pair<First, Second> pair){
+            int res = this.first.compareTo(pair.first);
+            return res == 0 ? this.second.compareTo(pair.second) : res; 
+        }
 		@Override
 		public boolean equals(Object o){
 			if(this == o)
@@ -98,6 +104,6 @@ public class Main{
             //gettime();
     }
     static void solve(FastReader in){
-              
+                 
     }
 }
