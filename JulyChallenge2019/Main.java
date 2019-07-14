@@ -58,65 +58,50 @@ public class Main{
         }
     }
     static class pair<First, Second>{
-        First first;
-        Second second;
-        pair(First first,Second second){
-            this.first = first;
-            this.second = second;
-        }
-        public First getFirst(){
-            return this.first;
-        }
-        public Second getSecond(){
-            return this.second;
-        }
-        @Override
-        public String toString(){
-            return (first + " " + second);
-        }
-        @Override
-        public boolean equals(Object o){
-            if(this == o)
-                return true;
-            if(o == null || getClass() != o.getClass())
-                return false;
-            pair<?,?> pair = (pair<?, ?>) o;
-            if(!first.equals(pair.first)) return false;
-            return second.equals(pair.second);
-        }
-        @Override
-        public int hashCode(){
-            return 31 * first.hashCode() + second.hashCode();
-        }
-    }
+		First first;
+		Second second;
+		pair(First first,Second second){
+			this.first = first;
+			this.second = second;
+		}
+		public First getFirst(){
+			return this.first;
+		}
+		public Second getSecond(){
+			return this.second;
+		}
+		@Override
+		public String toString(){
+			return (first + " " + second);
+		}
+		@Override
+		public boolean equals(Object o){
+			if(this == o)
+				return true;
+			if(o == null || getClass() != o.getClass())
+				return false;
+			pair<?,?> pair = (pair<?, ?>) o;
+			if(!first.equals(pair.first)) return false;
+			return second.equals(pair.second);
+		}
+		@Override
+		public int hashCode(){
+			return 31 * first.hashCode() + second.hashCode();
+		}
+	}
     
     public static void main(String args[]) throws IOException{
         FastReader in = new FastReader();
-            starttime();
+        	starttime();
             solve(in);
             stoptime();
             //gettime();
     }
     static void solve(FastReader in){
-        String hel = in.n();
-        if(hel == null){
-            out.println(0);
-            return;
+        int n = in.ni();
+        while(n-- > 0){
+            int arr[] = new int[s.nextInt()];
+            for(int i = 0; i < arr.length; i++) arr[i] = s.nextInt();
         }
-        Map<Character, Integer> map = new HashMap<>();
-        int count = 0;
-        int max = -1;
-        int start = 0, len = 0;
-        for(int i = 0; i < hel.length(); i++){
-            char c = hel.charAt(i);
-            if(map.containsKey(c)){
-                if(map.get(c) >= start)
-                    start = map.get(c) + 1;
-            }
-            map.put(c, i);
-            // if many substring exists then choose that one which has max length
-            len = Math.max(len, i - start + 1);
-        }
-        out.println(len);
     }
 }

@@ -58,65 +58,79 @@ public class Main{
         }
     }
     static class pair<First, Second>{
-        First first;
-        Second second;
-        pair(First first,Second second){
-            this.first = first;
-            this.second = second;
-        }
-        public First getFirst(){
-            return this.first;
-        }
-        public Second getSecond(){
-            return this.second;
-        }
-        @Override
-        public String toString(){
-            return (first + " " + second);
-        }
-        @Override
-        public boolean equals(Object o){
-            if(this == o)
-                return true;
-            if(o == null || getClass() != o.getClass())
-                return false;
-            pair<?,?> pair = (pair<?, ?>) o;
-            if(!first.equals(pair.first)) return false;
-            return second.equals(pair.second);
-        }
-        @Override
-        public int hashCode(){
-            return 31 * first.hashCode() + second.hashCode();
-        }
-    }
+		First first;
+		Second second;
+		pair(First first,Second second){
+			this.first = first;
+			this.second = second;
+		}
+		public First getFirst(){
+			return this.first;
+		}
+		public Second getSecond(){
+			return this.second;
+		}
+		@Override
+		public String toString(){
+			return (first + " " + second);
+		}
+		@Override
+		public boolean equals(Object o){
+			if(this == o)
+				return true;
+			if(o == null || getClass() != o.getClass())
+				return false;
+			pair<?,?> pair = (pair<?, ?>) o;
+			if(!first.equals(pair.first)) return false;
+			return second.equals(pair.second);
+		}
+		@Override
+		public int hashCode(){
+			return 31 * first.hashCode() + second.hashCode();
+		}
+	}
     
     public static void main(String args[]) throws IOException{
         FastReader in = new FastReader();
-            starttime();
+        	starttime();
             solve(in);
             stoptime();
             //gettime();
     }
     static void solve(FastReader in){
-        String hel = in.n();
-        if(hel == null){
-            out.println(0);
+        int t = in.ni();
+        while(t-- > 0){
+            int n = in.ni();
+            String[][] arr = new String[n][n];
+            for(int i = 0; i < arr.length; i++)
+                for(int j = 0; j < arr.length; j++)
+                    arr[i][j] = in.n().trim();
+            max = Integer.MIN_VALUE;
+            counter = 1;
+            solve(arr, n - 1, n - 1, 0);
+            out.println(max + " " + counter);
+        }  
+    }
+    static boolean isInt(String s){
+        try{
+            Integer.parseInt(s);
+        }
+        catch(Exception e){
+            return false;
+        }
+        return true;
+    }
+    static int max, counter;
+    static void solve(String[][] arr, int i, int j, int count){
+        if(i < 0 || j < 0) return;
+        if(i == 0 && j == 0){
+            if(max == count) counter++;
+            max = Math.max(max, count);
             return;
-        }
-        Map<Character, Integer> map = new HashMap<>();
-        int count = 0;
-        int max = -1;
-        int start = 0, len = 0;
-        for(int i = 0; i < hel.length(); i++){
-            char c = hel.charAt(i);
-            if(map.containsKey(c)){
-                if(map.get(c) >= start)
-                    start = map.get(c) + 1;
-            }
-            map.put(c, i);
-            // if many substring exists then choose that one which has max length
-            len = Math.max(len, i - start + 1);
-        }
-        out.println(len);
+        } 
+        if(isInt(arr[i][j])) count += Integer.parseInt(arr[i][j]);
+        solve(arr, i - 1, j, count);
+        solve(arr, i - 1, j - 1, count);
+        solve(arr, i, j - 1, count);
     }
 }

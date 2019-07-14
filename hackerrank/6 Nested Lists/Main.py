@@ -12,10 +12,6 @@ if __name__ == "__main__":
     if size == 1:
         print(next(iter(arr.keys())))
         exit(0)
-    for i in sorted(setarr.keys()):
-        if i > mini:
-            mini = i
-            break
     mini = sorted(setarr.keys())[1]
     string  = ''
     for i in sorted(arr.keys()):
