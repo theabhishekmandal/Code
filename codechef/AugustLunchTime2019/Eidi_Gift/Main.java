@@ -3,6 +3,7 @@ import java.io.*;
 import java.math.*;
 import java.util.regex.*;
 import static java.lang.System.*;
+https://www.codechef.com/viewsolution/26200682
 public class Main{
 
     static long start, stop, mod = (long) 1e9 + 7L;
@@ -110,6 +111,26 @@ public class Main{
             //gettime();
     }
     static void solve(FastReader in){
-                 
+        int t = in.ni();
+        while(t-- > 0){
+            pair[] agesAndMoney = new pair[3];
+            for(int i = 0; i < agesAndMoney.length; i++) agesAndMoney[i] = new pair<Integer, Integer>(in.ni(), 0);
+            for(int i = 0; i < agesAndMoney.length; i++) agesAndMoney[i].setSecond(in.ni());
+            Arrays.sort(agesAndMoney);
+            int max = Integer.MIN_VALUE;
+            String output = "FAIR";
+            for(int i = 0; i < agesAndMoney.length - 1; i++){
+                int first = agesAndMoney[i].getFirst().compareTo(agesAndMoney[i + 1].getFirst());
+                int second = agesAndMoney[i].getSecond().compareTo(agesAndMoney[i + 1].getSecond());
+                //System.out.println(first + " " + second);
+                if((first == 0 && second != 0) ||
+                (first < 0 && second >= 0) || 
+                (first > 0 && second <= 0)){
+                    output = "NOT FAIR";
+                    break;
+                }
+            }
+            System.out.println(output);
+        }
     }
 }

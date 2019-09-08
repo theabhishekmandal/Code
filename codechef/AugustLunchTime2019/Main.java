@@ -59,8 +59,8 @@ public class Main{
     }
     static class pair<First extends Comparable<? super First>,
      Second extends Comparable<? super Second>> implements Comparable<pair<First, Second>>{
-		public First first;
-		public Second second;
+		public final First first;
+		public final Second second;
 		pair(First first,Second second){
 			this.first = first;
 			this.second = second;
@@ -70,13 +70,7 @@ public class Main{
 		}
 		public Second getSecond(){
 			return this.second;
-        }
-        public void setFirst(First first){
-            this.first = first;
-        }
-        public void setSecond(Second second){
-            this.second = second;
-        }
+		}
 		@Override
 		public String toString(){
 			return  "[" + first + " " + second + "]";
