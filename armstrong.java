@@ -19,4 +19,7 @@ class armstrong
 			System.out.println("not armstrong");
 
 	}
+    public static void sayHello(){
+        System.out.println("hello world");
+    }
 }
