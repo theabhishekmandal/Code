@@ -6,10 +6,10 @@
        m + n is even then median is (n / 2 + n - 1 / 2) / 2
   The first approach would be creating array of size m + n and arranging the elements in ascending order.
   In that case the time taken would be O(m + n).
- 
+
   Next approach would be to partitioning the two arrays such that, the total elements of x and y on left is
   equal to total elements of x and y on the right. For eg:
- 
+
       x -> x1, x2, x3 | x4, x5, x6
       y -> y1, y2, y3, y4 | y5, y6, y7, y8
       x3 <= y5
@@ -18,23 +18,23 @@
       now
            if length of the list is odd then median would be max(x3, y4)
            if length of the list is even then median  would be avg(max(x3, y4), min(y5, x4))
- 
+
       if the above condition does not satisfies then check if x3 > y5, if yes
       then we are too much on the right side of x and will shift to left side by reducing the partitionx by 1
- 
+
       else if y4 > x4 then we are too much on the left side of x and will shift to right side by increasing the
       partitionx by 1
- 
+
       there may be a condition when the partitionx and partitiony might be at a position where there might be
       no elements then at that case we can use +INF and -INF.
  '''
- 
+
 
 
 def getMedianOfTwoSortedArrays(first:list, second:list) -> int:
     if len(first) > len(second):
         return getMedianOfTwoSortedArrays(second, first)
-    x, y = len(first), len(second)
+:   x, y = len(first), len(second)
     low, high = 0, x
     while low <= high:
         partitionx = low + ((high - low) >> 1)
