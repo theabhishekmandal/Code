@@ -1,6 +1,6 @@
 import time
 import sys
-global start, stop
+start = stop = 0.0
 
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
